@@ -35,7 +35,7 @@ _Interstellar2_ скачивает отзывы с помощью утилиты
 ## Использование
 Один раз сконфигурировать и запускать `PKGNAME=com.example.app ruby sender.rb`, где PKGNAME системная переменная которая содержит имя вашего пакета (приложения)
 
-## Испозьзование через докер
+## Использование через докер
 Для того чтоб не быть зависимым от руби, можно использовать готовый официальный образ руби и запускать следующим образом.
 
     docker run --rm -e "PKGNAME=com.exampe.app" -v $(pwd):/interstellar2 ruby:latest sh -c "gem install rest-client 1>/dev/null 2>&1; cd /interstellar2; ruby ./sender.rb"
