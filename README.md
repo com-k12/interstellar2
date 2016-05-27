@@ -1,7 +1,7 @@
 # Interstellar2
 Средство для автоматического постинга отзывов пользователей об ваших приложениях Google Play Store в мессанджер Telegram (чат, канал, личная переписка). Приложение написано на руби и основывается на проекте [interstellar](https://github.com/meduza-corp/interstellar).
 
-![slack](https://raw.githubusercontent.com/meduza-corp/interstellar/master/slack_screenshot.jpg?token=AAyQJbZeASPCKj8YppJQFsOTtR8FLUeDks5U5ysrwA%3D%3D)
+![slack](https://raw.githubusercontent.com/com-k12/interstellar2/master/telegram_screenshot.jpg)
 
 ## Как это работает
 Google Play [экспортирует](https://support.google.com/googleplay/android-developer/answer/138230) все отзывы на ваши приложения один раз в день в [Google Cloud Storage](https://cloud.google.com/storage/docs) bucket.
