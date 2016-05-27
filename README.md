@@ -17,7 +17,7 @@ _Interstellar2_ скачивает отзывы с помощью утилиты
   Вам необходимо указать:
   - Bucket id (app_repo). Можно найти на странице Reviews в консоле разработчика Google Play. Вида:  `pubsite_prod_rev_01234567890987654321`
   - Сформировать telegram_url для [метода отправки](https://core.telegram.org/bots/api#sendmessage) сообщения в телеграм через вашего бота
-  - Указать telegram_chat_id. Это айди групповога чата/канала или личной переписки с ботом
+  - Указать telegram_chat_id. Это айди группового чата/канала или личной переписки с ботом
 
 2. Сконфигурировать [gsutil](https://github.com/GoogleCloudPlatform/gsutil/). Простое питоновское приложение от Google, инструкция далее.
 
