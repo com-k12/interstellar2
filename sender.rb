@@ -16,12 +16,14 @@ system "BOTO_PATH=./secrets/.boto gsutil/gsutil cp -r gs://#{CONFIG["app_repo"]}
 
 class Telegram
   def self.notify(message)
-   message.collect do |t|
    telegram_chat_id = "#{CONFIG["telegram_chat_id"]}"
+   telegram_disable_notification = false
+   message.collect do |t|
     RestClient.post CONFIG["telegram_url"],
-      { chat_id: telegram_chat_id, "parse_mode": "HTML", text: t }.to_json,
+      { chat_id: telegram_chat_id, disable_notification: telegram_disable_notification, "parse_mode": "HTML", text: t }.to_json,
     content_type: :json,
     accept: :json
+   telegram_disable_notification = true
    end 
   end
 end
@@ -51,7 +53,7 @@ class Review
     @original_subitted_at = DateTime.parse(data[:original_subitted_at].encode("utf-8"))
 
     @rate = data[:rate].encode("utf-8").to_i
-    @device = data[:device] ? data[:device].to_s.encode("utf-8") : nil
+    @device = data[:device] ? "| #{data[:device].to_s.encode("utf-8")}" : nil
     @url = data[:url].to_s.encode("utf-8")
     @version = data[:version] ? "[#{data[:version].to_s.encode("utf-8")}]" : nil
     @pkgname = data[:pkgname].to_s.encode("utf-8")
